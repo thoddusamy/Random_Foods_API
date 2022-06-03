@@ -85,6 +85,7 @@ document.body.prepend(div)
 // -------------------- fetch data using async & await function ----------------------
 
 async function get() {
+    try {
   let req = await fetch('https://www.themealdb.com/api/json/v1/1/random.php')
   let reqq = await req.json()
 
@@ -287,4 +288,7 @@ async function get() {
   document.querySelector('.measures-title').innerHTML = `<h2>Measures</h2>`
 
   document.querySelector('.instruct').innerHTML = `<h3>Instructions:</h3>`
+} catch (error) {
+    console.log(error)
+}
 }
