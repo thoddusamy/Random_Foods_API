@@ -291,4 +291,4 @@ async function get() {
 } catch (error) {
     console.log(error)
 }
-
+}
